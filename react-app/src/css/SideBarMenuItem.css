@@ -1,0 +1,10 @@
+.menu-item {
+    text-align: center;
+    margin: 5% 2%;
+    padding: 4%;
+    color: white;
+}
+
+.menu-item:hover {
+    color: aquamarine;
+}

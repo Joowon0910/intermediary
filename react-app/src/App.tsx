@@ -1,16 +1,21 @@
 import React from 'react';
-import { BrowserRouter, Route, Routes } from "react-router-dom";
 import './App.css';
+import { Outlet, Link } from "react-router-dom";
+import Header from './components/Header';
+import SideBar from './components/SideBar';
 
 function App() {
+
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<></>} />
-        {/* exact  */}
-        {/* <Route path={`/${Statics_Name}`} element={<StaitcsRoute />} /> */}
-      </Routes>
-    </BrowserRouter>
+    <div>
+      <Header/>
+      <SideBar/>
+      {/* <nav>
+        <Link to="/index"><span className="LinkInnerText">Index</span></Link> |{" "}
+        <Link to="/notice"><span className="LinkInnerText">Notice</span></Link>
+      </nav> */}
+      <Outlet />
+    </div>
   );
 }
 

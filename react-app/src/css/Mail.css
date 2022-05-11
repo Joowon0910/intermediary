@@ -1,0 +1,29 @@
+.mail-wrapper {
+    border-top: 2px dotted green;
+}
+.title {
+    font-size: large;
+    margin-top: 15%;
+    margin-left: 5%;
+    
+}
+.mail-content-container {
+    width: 225px;
+    height: 400px;
+    overflow-y: scroll;
+}
+
+.mail-content-container::-webkit-scrollbar {
+    width: 7px;  /* 스크롤바의 너비 */
+}
+
+.mail-content-container::-webkit-scrollbar-thumb {
+    height: 30%; /* 스크롤바의 길이 */
+    background: #217af4; /* 스크롤바의 색상 */
+    
+    border-radius: 10px;
+}
+
+.mail-content-container::-webkit-scrollbar-track {
+    background: rgba(33, 122, 244, .1);  /*스크롤바 뒷 배경 색상*/
+}

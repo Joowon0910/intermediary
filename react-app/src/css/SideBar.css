@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+.wrapper .sidebar{
+    background: rgb(79, 118, 140);
+    position:fixed;
+    left: 0;
+    top: 50px;
+    width: 225px;
+    height: 100%;
+    transition: all 0.5s ease;
+    background: green;
+    padding-top: 2%;
+}

@@ -1,0 +1,12 @@
+body {
+    background: #3c3c3c;
+    color: white;
+    list-style: none;
+    text-decoration: none;
+     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    padding-top: 50px;
+    padding-left: 225px;
+}
