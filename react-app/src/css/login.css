@@ -1,0 +1,46 @@
+.login-form {
+    margin: 8%;
+    padding:  3% 10%;
+    /* border: 2px solid green; */
+    height: 30%;
+    font-size: xx-large;
+    text-align: center;
+}
+.login-form-wrapper{
+    /* border: 1px solid greenyellow; */
+    padding:  2% 4%;
+    display: block;
+}
+.input-label {
+    font-size: x-large;
+    display: inline-block;
+    margin: 1% 2%;
+    width: 10%;
+    height: 5%;
+    color:green;
+}
+
+.input-form {
+    color: white;
+    font-size: xx-large;
+    margin: 0 2%;
+    width: 40%;
+    height: 20%;
+    display: inline-block;
+    background-color: #3c3c3c;
+    border: none;
+    border-bottom: 1px solid green;
+}
+.input-form:focus {
+    outline: none;
+}
+.input-button{
+    margin: 3%;
+    width: 26%;
+    display: inline-block;
+    border: 1px solid green;
+}
+
+.input-button:hover {
+    background-color: bisque;
+}

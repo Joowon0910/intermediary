@@ -1,0 +1,23 @@
+.board_header_wrapper {
+    margin: 2% 3%;
+    border-bottom: 1px solid sandybrown;
+    font-size: xx-large;
+}
+
+.board_index {
+float: left;
+padding-right: 6%;
+}
+
+.board_title { 
+
+    text-align: center;
+}
+.board_date_created{
+    padding-right: 6%;
+    float: left;
+}
+.board_date_created::after {
+    margin: 0 auto;
+    
+}

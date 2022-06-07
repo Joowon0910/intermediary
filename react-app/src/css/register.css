@@ -1,0 +1,73 @@
+.register-form {
+    margin: 10% 30%;
+    height: 30%;
+    font-size: x-large;
+    display: block;
+}
+.register-form-title{
+    margin: 5%;
+    text-align: center;
+    font-size: xx-large;
+}
+
+register-form-wrapper {
+    margin: 0 auto;
+    border: 2px solid green;
+    display: block;
+}
+
+.register-label {
+    margin: 3% 0;
+    width: 28%;
+    margin: 1%;
+    display: inline-block;
+}
+
+.register-input {
+    margin: 3% 0;
+    font-size: x-large;
+    color: white;
+    background-color: #3c3c3c;
+    border: none;
+    border-bottom: 1px solid green;
+    display: inline-block;
+}
+
+.register-input:focus {
+    outline: none;
+}
+
+
+
+.radio-btn[type=radio] {
+    display:none;
+}
+.radio-btn[type=radio]+label {
+    margin: 1% 2%;
+    padding: 0 3%;
+    border-bottom: 1px solid green;
+}
+.radio-btn[type=radio]+label:hover {
+    color:darkgray;
+    border-bottom: 1px solid greenyellow;
+}
+.radio-btn[type=radio]:checked+label {
+    color:aquamarine;
+}
+.btn {
+    width: 47%;
+    text-align: center;
+    display: inline-block;
+    background-color: darkgreen;
+}
+
+.btn:hover {
+    border: 1px solid green;
+    background-color: aquamarine;
+}
+
+.register-btn-frame {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
