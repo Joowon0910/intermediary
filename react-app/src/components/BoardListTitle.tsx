@@ -28,7 +28,7 @@ export default function BoardListTitle(props: propsType) {
   }
   return (
     <div className="board_list_title_wrapper">
-      {changeTitleURLtoString(props.title)}
+      {`${changeTitleURLtoString(props.title)}`}
     </div>
   );
 }

@@ -1,4 +1,5 @@
 .board_list_title_wrapper {
+    width: 95%;
     margin: 0 auto;
     font-size: xx-large;
     border-bottom: 3px double green;

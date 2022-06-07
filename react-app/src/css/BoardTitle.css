@@ -14,8 +14,7 @@ padding-right: 6%;
     text-align: center;
 }
 .board_date_created{
-    padding-right: 6%;
-    float: left;
+    float: right;
 }
 .board_date_created::after {
     margin: 0 auto;

@@ -4,3 +4,9 @@
 nav a {
     text-decoration: none;
 }
+
+.content_frame {
+    margin-top: 4%;
+    margin-left: 16%;
+    overflow:hidden;
+}

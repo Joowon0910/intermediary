@@ -1,8 +1,7 @@
 .login-form {
-    margin: 8%;
+    margin: 10% auto;
     padding:  3% 10%;
     /* border: 2px solid green; */
-    height: 30%;
     font-size: xx-large;
     text-align: center;
 }
@@ -12,19 +11,21 @@
     display: block;
 }
 .input-label {
+    text-align: left;
     font-size: x-large;
     display: inline-block;
     margin: 1% 2%;
-    width: 10%;
+    padding-left: 5%;
+    width: 8%;
     height: 5%;
     color:green;
 }
 
 .input-form {
     color: white;
-    font-size: xx-large;
+    font-size: x-large;
     margin: 0 2%;
-    width: 40%;
+    width: 37%;
     height: 20%;
     display: inline-block;
     background-color: #3c3c3c;
@@ -35,12 +36,19 @@
     outline: none;
 }
 .input-button{
+    font-size: x-large;
+    color: white;
     margin: 3%;
     width: 26%;
     display: inline-block;
-    border: 1px solid green;
+
+    -ms-user-select: none;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .input-button:hover {
-    background-color: bisque;
+    color: aquamarine;
 }

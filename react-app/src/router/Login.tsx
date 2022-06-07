@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "../css/login.css";
 export default function Login() {
   return (
@@ -30,8 +31,8 @@ export default function Login() {
           placeholder="password"
         />
         <br />
-        <div className="input-button">로그인</div>
-        <div className="input-button">회원가입</div>
+        <Link to={`/mypage`} className="input-button" style={{ textDecoration: 'none' }}>로그인</Link>
+        <Link to={`/register`} className="input-button" style={{ textDecoration: 'none' }}>회원가입</Link>
       </div>
     </div>
   );

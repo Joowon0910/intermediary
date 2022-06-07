@@ -1,5 +1,6 @@
 .board_list_frame_page_wrapper {
-    width: 97%;
-    margin: 2% auto;    
-    
+    padding-top: 0.5%;
+    padding-left: 3%;
+    /* margin-top: 3%;
+    margin-left: 10%;     */
 }

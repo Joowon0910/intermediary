@@ -1,24 +1,24 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
 import { Outlet } from "react-router-dom";
-import Header from './components/Header';
-import SideBar from './components/SideBar';
-import { Provider } from 'react-redux';
-import store from './redux/IndexkeyStore';
-
+import Header from "./components/Header";
+import SideBar from "./components/SideBar";
+import { Provider } from "react-redux";
+import store from "./redux/IndexkeyStore";
+const windowLocationOrigin: string = window.location.origin;
+const windowLocationPathaname: string = window.location.pathname;
 function App() {
-
-  return (
-    <Provider store={store}>
-      <Header/>
-      <SideBar/>
-      {/* <nav>
-        <Link to="/index"><span className="LinkInnerText">Index</span></Link> |{" "}
-        <Link to="/notice"><span className="LinkInnerText">Notice</span></Link>
-      </nav> */}
-      <Outlet />
-    </Provider>
-  );
+  if (windowLocationPathaname === "/") 
+    window.location.replace(`${windowLocationOrigin}${windowLocationPathaname}mypage`);
+    return (
+      <Provider store={store}>
+        <Header />
+        <SideBar />
+        <div className="content_frame">
+          <Outlet />
+        </div>
+      </Provider>
+    );
 }
 
 export default App;

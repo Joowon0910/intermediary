@@ -3,6 +3,8 @@ import { useState } from "react";
 import { connect } from "react-redux";
 import { actionCreators } from "../redux/IndexkeyStore";
 const CHANGE_INDEX_KEY = "CHANGE_INDEX_KEY";
+const CHANGE_SELECTED_INDEX = "CHANGE_SELECTED_INDEX";
+
 interface stateType {
   indexKey: number;
   selectedIndex: number;
@@ -10,13 +12,14 @@ interface stateType {
 function ListNavigator(props: any) {
   const [indexVaule, setIndexValue] = useState(props.state.indexKey);
   function SelectIndex(target: any) {
-    props.changeIndexKey(CHANGE_INDEX_KEY, target.id);
+    props.changeSelectedIndex(CHANGE_SELECTED_INDEX, target.id);
   }
   function changeIndexKey(btn: string) {
     switch (btn) {
       case "<<": {
-        //START
-
+        console.log("<<");
+        props.startIndexKey(btn);
+        setIndexValue(props.state.indexKey);
         break;
       }
       case "<": {
@@ -37,7 +40,6 @@ function ListNavigator(props: any) {
         break;
       }
       default: {
-
         break;
       }
     }
@@ -58,7 +60,7 @@ function ListNavigator(props: any) {
       >{`<`}</div>
       <div
         className="list_navigator item"
-        id={`${indexVaule* 10 + 1}`}
+        id={`${indexVaule * 10 + 1}`}
         onClick={(e: React.MouseEvent<HTMLElement>) => {
           SelectIndex(e.target);
         }}
@@ -76,7 +78,7 @@ function ListNavigator(props: any) {
       </div>
       <div
         className="list_navigator item"
-        id={`${indexVaule* 10 + 3}`}
+        id={`${indexVaule * 10 + 3}`}
         onClick={(e: React.MouseEvent<HTMLElement>) => {
           SelectIndex(e.target);
         }}
@@ -167,9 +169,13 @@ function mapStateToProps(state: stateType) {
 
 function mapDispatchToProps(dispatch: any) {
   return {
+    startIndexKey: (text: string) => dispatch(actionCreators.startIndexKey(text)),
     addIndexKey: (text: string) => dispatch(actionCreators.addIndexKey(text)),
     subIndexKey: (text: string) => dispatch(actionCreators.subIndexKey(text)),
-    changeIndexKey: (text: string, value:number) => dispatch(actionCreators.changeIndexKey(text,value)),
+    changeIndexKey: (text: string, value: number) =>
+      dispatch(actionCreators.changeIndexKey(text, value)),
+    changeSelectedIndex: (text: string, value: number) =>
+      dispatch(actionCreators.changeSelectedIndex(text, value)),
   };
 }
 export default connect(mapStateToProps, mapDispatchToProps)(ListNavigator);

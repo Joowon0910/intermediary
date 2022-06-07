@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "../css/register.css";
 export default function Register() {
   return (
@@ -53,8 +54,8 @@ export default function Register() {
         <input id="platformNickname" type="text" className="register-input" placeholder="Platform Nickname"/>
         <br />
         <div className="register-btn-frame">
-          <div className="btn">submit</div>
-          <div className="btn">back to home</div>
+          <Link to={'/login'} className="btn" style={{ textDecoration: 'none' }}>계정 생성</Link>
+          <Link to={'/login'} className="btn" style={{ textDecoration: 'none' }} onClick={()=>{}}>뒤로</Link>
         </div>
       </div>
     </div>

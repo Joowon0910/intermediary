@@ -9,8 +9,13 @@ const START = "<<";
 const END = ">>";
 const CHANGE_INDEX_KEY = "CHANGE_INDEX_KEY";
 const CHANGE_SELECTED_INDEX = "CHANGE_SELECTED_INDEX";
+const startIndexKey = (text: string) => {
+  return {
+    type: START,
+    text,
+  };
+};
 const addIndexKey = (text: string) => {
-  console.log(text);
   return {
     type: ADD,
     text,
@@ -77,6 +82,7 @@ const reducer = (
 const store = createStore(reducer);
 
 export const actionCreators = {
+  startIndexKey,
   addIndexKey,
   subIndexKey,
   changeIndexKey,
