@@ -21,10 +21,10 @@ register-form-wrapper {
     margin: 3% 0;
     font-size: x-large;
     color: white;
-    background-color: #3c3c3c;
+    background-color: #3A4750;
     border: none;
     display: inline-block;
-    border-bottom: 1px solid green;
+    border-bottom: 1px solid #EEEEEE;
 }
 
 .register-input:focus {
@@ -49,17 +49,18 @@ register-form-wrapper {
     user-select: none;
     margin: 1% 1%;
     padding: 0 3%;
-    border-bottom: 1px solid green;
+    border-bottom: 1px solid #EEEEEE;
 }
 .radio-btn[type=radio]+label:hover {
-    color:darkgray;
-    border-bottom: 1px solid greenyellow;
+    color:#D72323;
+    border-bottom: 1px solid #D72323;
 }
 .radio-btn[type=radio]:checked+label {
-    color:aquamarine;
+    color:#D72323;
+    border-bottom: 1px solid #D72323;
 }
-.btn {
-    color: white;
+.register_btn {
+    color: #EEEEEE;
     text-align: center;
     display: inline-block;
     -ms-user-select: none;
@@ -70,8 +71,8 @@ register-form-wrapper {
     margin: 0 7%;
 }
 
-.btn:hover {
-    color: aquamarine;
+.register_btn:hover {
+    color: #D72323;
 }
 
 /* .register-btn-frame {

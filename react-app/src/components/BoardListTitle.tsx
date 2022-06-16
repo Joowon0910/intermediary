@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "../css/BoardListTitle.css";
 interface propsType {
   title: string;
@@ -28,7 +29,8 @@ export default function BoardListTitle(props: propsType) {
   }
   return (
     <div className="board_list_title_wrapper">
-      {`${changeTitleURLtoString(props.title)}`}
+      <span className="board_list_title">{`${changeTitleURLtoString(props.title)}`}</span>
+      <Link to={'/edit'} className="board_list_write_content" >글쓰기</Link>
     </div>
   );
 }

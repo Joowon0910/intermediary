@@ -1,4 +1,7 @@
 package project.intermediary.entity;
+
+import java.sql.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -12,14 +15,15 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Entity
 @Table(name = "boardtitle_tbl")
-public class Member {
-    @Id
-    @GeneratedValue
-    private int id;
-    private String userID;
-    private String password;
-    private String email;
-    private String platform;
-    private String nickname;
-
+public class BoardTitle {
+  @Id
+  @GeneratedValue
+  private int index;
+    //id는 작성날짜 + 제목(해싱) + 작성자(해싱)
+  private String id;
+  private String title;
+  private Date dateCreated;
+  private String author;
+  private int liked;
+  private int views;
 }

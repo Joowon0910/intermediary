@@ -1,8 +1,24 @@
+import { useParams } from "react-router-dom";
 import BoardListFrame from "../components/BoardListFrame";
-interface propsType {
-    boardTitle: string;
-    page:string;
+
+const PAGE: string = "page";
+const BOARDTITLE = "boardTitle";
+const ListOfPages: string[] = [
+  "notice",
+  "content_summary",
+  "collabo_suggest",
+  "content_confirm",
+  "self_introduction",
+];
+export default function BoardList() {
+  const param = useParams();
+  if (!param[PAGE] || !ListOfPages.includes(String(param[PAGE]))) {
+    window.location.href='http://localhost:3000/login';
   }
-export default function BoardList(props:propsType) {
-    return (<BoardListFrame page={props.page} boardTitle={props.boardTitle}/>);
+  return (
+    <BoardListFrame
+      page={typeof param[PAGE] ? String(param[PAGE]) : ""}
+      boardTitle={typeof param[BOARDTITLE] ? String(param[PAGE]) : ""}
+    />
+  );
 }

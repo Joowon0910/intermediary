@@ -15,11 +15,11 @@ function SideBarMenuItem(props:any) {
   }
   return (
     <div>
-      <Link to="./Notice/list" style={{ textDecoration: 'none' }} onClick={setIndexToOne}><div className="menu-item">공지사항</div></Link>
-      <Link to="./content_summary/list" style={{ textDecoration: 'none' }} onClick={setIndexToOne}><div className="menu-item">방송 컨텐츠 정리</div></Link>
-      <Link to="./collabo_suggest/list" style={{ textDecoration: 'none' }} onClick={setIndexToOne}><div className="menu-item">콜라보 제의</div></Link>
-      <Link to="./content_confirm/list" style={{ textDecoration: 'none' }} onClick={setIndexToOne}><div className="menu-item">컨텐츠 활용 인증</div></Link>
-      <Link to="./self_introduction/list" style={{ textDecoration: 'none' }} onClick={setIndexToOne}><div className="menu-item">자기 소개</div></Link>
+      <Link to="./list/notice/notice" style={{ textDecoration: 'none' }} onClick={setIndexToOne}><div className="menu-item">공지사항</div></Link>
+      <Link to="./list/content_summary/content_summary" style={{ textDecoration: 'none' }} onClick={setIndexToOne}><div className="menu-item">방송 컨텐츠 정리</div></Link>
+      <Link to="./list/collabo_suggest/collabo_suggest" style={{ textDecoration: 'none' }} onClick={setIndexToOne}><div className="menu-item">콜라보 제의</div></Link>
+      <Link to="./list/content_confirm/content_confirm" style={{ textDecoration: 'none' }} onClick={setIndexToOne}><div className="menu-item">컨텐츠 활용 인증</div></Link>
+      <Link to="./list/self_introduction/self_introduction" style={{ textDecoration: 'none' }} onClick={setIndexToOne}><div className="menu-item">자기 소개</div></Link>
     </div>
   );
 }

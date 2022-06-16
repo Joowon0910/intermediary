@@ -7,7 +7,7 @@ export default function BoardTitle(props: propsTpye) {
       <div className="board_header_wrapper">
         <span className="board_index">#{1}</span>
         <span className="board_date_created">2022-02-02</span>
-        <div className="board_title">{props.title}</div>
+        <div className="board_title">{"title"}</div>
       </div>
   );
 }

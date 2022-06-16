@@ -4,6 +4,7 @@
     /* border: 2px solid green; */
     font-size: xx-large;
     text-align: center;
+    color: #EEEEEE;
 }
 .login-form-wrapper{
     /* border: 1px solid greenyellow; */
@@ -18,7 +19,7 @@
     padding-left: 5%;
     width: 8%;
     height: 5%;
-    color:green;
+    color:#EEEEEE;
 }
 
 .input-form {
@@ -28,9 +29,9 @@
     width: 37%;
     height: 20%;
     display: inline-block;
-    background-color: #3c3c3c;
+    background-color: #3A4750;
     border: none;
-    border-bottom: 1px solid green;
+    border-bottom: 1px solid #EEEEEE;
 }
 .input-form:focus {
     outline: none;
@@ -50,5 +51,5 @@
 }
 
 .input-button:hover {
-    color: aquamarine;
+    color: #D72323;
 }

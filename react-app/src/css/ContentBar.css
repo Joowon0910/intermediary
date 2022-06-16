@@ -1,15 +1,13 @@
 .content_bar_wrapper{
-    border: 1px solid white;
+    border: 1px solid #EEEEEE;
     width: 93%;
     margin: 1.4% auto;
     height: 44px;
     display:block;
     border-radius: 20px;
 }
-
 .content_bar_wrapper:hover {
-    background-color: darkgreen;
-    color: black;
+    background-color: #303841;
 }
 
 .content_bar{
@@ -20,15 +18,15 @@
 }
 .index {
     width: 3%;
- color: #ffffff;
+ color: #EEEEEE;
 }
 
 .title{
-    color: #ffffff;
+    color: #EEEEEE;
 }
 .writer {    
     float: right;
-    color: #ffffff;
+    color: #EEEEEE;
 }
 
 .date_created{

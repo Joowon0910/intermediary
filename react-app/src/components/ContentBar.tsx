@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import store from "../redux/IndexkeyStore";
 interface propsType {
   boardTitle: string;
-  page:string;
+  page: string;
   id: number;
   state: stateType;
 }
@@ -16,19 +16,18 @@ interface stateType {
 
 function ContentBar(props: propsType) {
   const [contentBarTitle, setContentBarTitle] = useState("title");
-  const [selectedIndex, setSelectedIndex] = useState((props.state.selectedIndex-1)*10+props.id);
+  const [selectedIndex, setSelectedIndex] = useState(
+    (props.state.selectedIndex - 1) * 10 + props.id
+  );
   store.subscribe(() => {
-    setSelectedIndex((props.state.selectedIndex-1)*10+props.id);
+    setSelectedIndex((props.state.selectedIndex - 1) * 10 + props.id);
   });
   return (
-    <Link
-      to={`/${props.page}/board/${props.page}/${props.boardTitle}`}
-      className="content_bar_wrapper"
-    >
-      <div className="content_bar index">#{selectedIndex}</div>
-      <div className="content_bar title">{props.boardTitle}</div>
-      <div className="content_bar writer">author</div>
-      <div className="content_bar date_created">date created</div>
+    <Link to={`/board/${props.page}`} className="content_bar_wrapper ">
+      <div className="content_bar index ">#{selectedIndex}</div>
+      <div className="content_bar title ">{"123"}</div>
+      <div className="content_bar writer ">author</div>
+      <div className="content_bar date_created ">date created</div>
     </Link>
   );
 }

@@ -54,8 +54,8 @@ export default function Register() {
         <input id="platformNickname" type="text" className="register-input" placeholder="Platform Nickname"/>
         <br />
         <div className="register-btn-frame">
-          <Link to={'/login'} className="btn" style={{ textDecoration: 'none' }}>계정 생성</Link>
-          <Link to={'/login'} className="btn" style={{ textDecoration: 'none' }} onClick={()=>{}}>뒤로</Link>
+          <Link to={'/login'}  style={{ textDecoration: 'none' }}><div className="register_btn">계정 생성</div></Link>
+          <Link to={'/login'}  style={{ textDecoration: 'none' }} onClick={()=>{}}><div className="register_btn">뒤로</div></Link>
         </div>
       </div>
     </div>

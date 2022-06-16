@@ -8,7 +8,7 @@
     width: 225px;
     height: 100%;
     transition: all 0.5s ease;
-    background: #3c3c3c;
+    background: #3A4750;
 }
 .wrapper::after {
     display: block;

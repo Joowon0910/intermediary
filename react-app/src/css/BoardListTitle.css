@@ -2,5 +2,19 @@
     width: 95%;
     margin: 0 auto;
     font-size: xx-large;
-    border-bottom: 3px double green;
+    border-bottom: 3px solid #EEEEEE;
+}
+.board_list_title{
+    margin-left: 2%;
+}
+.board_list_write_content{
+    color: #EEEEEE;
+    font-size: large;
+    padding: 0.7%;
+    margin-right: 4%;
+    float: right;
+    text-decoration: none;
+}
+.board_list_write_content:hover {
+    color: #D72323;
 }
