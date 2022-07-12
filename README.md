@@ -20,6 +20,8 @@
 
 <h4>프로젝트 구조</h4>
 <h5></h5>
+ <img src="[/uploads/1848994ad25765da30fa8ef3684c67bc/캡처.PNG](https://user-images.githubusercontent.com/61627831/178396948-d172ce98-0078-4743-95e7-765f8a4d91d5.png)"/>
+
 ![react](https://user-images.githubusercontent.com/61627831/178396948-d172ce98-0078-4743-95e7-765f8a4d91d5.png)
 
 <h5></h5>
