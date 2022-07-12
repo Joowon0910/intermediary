@@ -18,6 +18,11 @@
   
 </table>
 
-![backend](https://user-images.githubusercontent.com/61627831/178396799-19f810e9-9a9b-43d5-a985-5a2a0d36c531.png)
-![react](https://user-images.githubusercontent.com/61627831/178396803-3f1d40be-2a38-4213-93a3-c2f55b53521c.png)
-![resource](https://user-images.githubusercontent.com/61627831/178396810-6aa7e9be-d157-468a-a58e-d7fe925aeb74.png)
+<h4>프로젝트 구조</h4>
+<h5>
+![react](https://user-images.githubusercontent.com/61627831/178396948-d172ce98-0078-4743-95e7-765f8a4d91d5.png)
+</h5>
+<h5>
+![backend](https://user-images.githubusercontent.com/61627831/178396943-22daa3c5-03ee-4c24-8a98-3d92587079dd.png)
+![resource](https://user-images.githubusercontent.com/61627831/178396949-202eb1fe-d521-4533-9cd8-dd83c8e67df8.png)
+</h5>
