@@ -29,15 +29,52 @@
 
   <h4>진행 과정</h4>
   <table>
-    <th row=5>Front-end</th>
+    <th colspan=2>Front-end</th>
     <tr>
       <td>React router 구성</td>
-      <td>헤더, 사이드 바</td>
-      <td>게시판 목록, 내용 페이지</td>
-      <td>로그인, 회원가원 폼</td>
-      <td>마이페이지</td>
-      <td></td>
+      <td>완료</td>
     </tr>
+    <tr>
+      <td>헤더, 사이드 바</td>
+      <td>완료</td>
+    </tr>
+    <tr>
+      <td>게시판 목록</td>
+      <td>완료</td>
+    </tr>
+    <tr>
+      <td>게시판 내용</td>
+      <td>진행증</td>
+    </tr>
+    <tr>  
+      <td>로그인, 회원가원 폼</td>
+      <td>수정중</td>
+     </tr>
+    <tr>
+      <td>마이페이지</td>
+      <td>준비중</td>
+    </tr>
+    <th colspan=2>Back-end</th>
+    <tr>
+      <td>페이지 접근 제한</td>
+      <td>진행중</td>
+    </tr>
+    <tr>
+      <td>로그인 처리</td>
+      <td>진행중</td>
+    </tr>
+    <tr>
+      <td>회원가입 처리</td>
+      <td>진행중</td>
+    </tr>
+    <tr>
+      <td>게시글 처리</td>
+      <td>진행중</td>
+    </tr>
+    <tr>  
+      <td>마이페이지 관련 데이터 처리</td>
+      <td>준비중</td>
+     </tr>
   </table>
   
   
