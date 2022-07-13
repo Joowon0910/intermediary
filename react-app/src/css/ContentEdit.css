@@ -36,21 +36,25 @@
 
 .ContentEdit_header_wrapper {
     margin: 2%;
-    padding: 1% 3%;
+    padding: 1% 2%;
     text-align: center;
     border: 1px solid #EEEEEE;
     border-radius: 10px;
+    overflow: hidden;
 }
+.ContentEdit_input_wrapper {
+    margin: 1% 2%;
+    width: 44%;
+    float: left;
 
+}
 .ContentEdit_input {
-    margin: 0.5% 0;
+    width: 100%;
     background-color: #3A4750;
     color: white;
     border: #EEEEEE;
-    width: 49%;
     font-size: x-large;
     text-decoration: none;
-
 }
 
 .ContentEdit_input:focus {
@@ -67,8 +71,12 @@
     border-radius: 10px;
     height: 70%;
     width: 92%;
-    overflow: scroll;
     font-size: large;
+    overflow: hidden;
+}
+
+.ContentEdit_wrapper_on_focus {
+    border: 1px solid #D72323 !important;
 }
 
 .ContentEdit_content_wrapper:focus {
@@ -83,10 +91,33 @@
     font-size: larger;
     text-decoration: none;
     outline: none;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 .Content_editer_placeholder{
     color: #EEEEEE;
+    font-size: larger !important;
 }
 .disable {
     display: none !important;
+}
+
+.ContentEdit_validation_false {
+    border-bottom: 1px solid #D72323;
+}
+.ContentEdit_validation_warning {
+    display: flex;
+    color:#D72323;
+    font-size: medium;
+}
+
+.ContentEdit_No_content {
+    color:#EEEEEE;
+    border: 1px solid #D72323;
+    border-radius: 15px;
+    padding: 1%;
+    text-align: center;
+    display: inline-block;
+    font-size: x-large;
+    margin: 0 10%;
 }

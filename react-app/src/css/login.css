@@ -1,4 +1,4 @@
-.login-form {
+.login_frame {
     margin: 10% auto;
     padding:  3% 10%;
     /* border: 2px solid green; */
@@ -6,12 +6,12 @@
     text-align: center;
     color: #EEEEEE;
 }
-.login-form-wrapper{
+.login_form_wrapper{
     /* border: 1px solid greenyellow; */
     padding:  2% 4%;
     display: block;
 }
-.input-label {
+.login_input_label {
     text-align: left;
     font-size: x-large;
     display: inline-block;
@@ -22,7 +22,7 @@
     color:#EEEEEE;
 }
 
-.input-form {
+.login_input {
     color: white;
     font-size: x-large;
     margin: 0 2%;
@@ -33,11 +33,17 @@
     border: none;
     border-bottom: 1px solid #EEEEEE;
 }
-.input-form:focus {
+.login_input:focus {
     outline: none;
 }
-.input-button{
+.login_validation {
+    color: #D72323 !important;
+}
+.login_button{
     font-size: x-large;
+    text-decoration: none;
+    background-color: #3A4750;
+    border: none;
     color: white;
     margin: 3%;
     width: 26%;
@@ -50,6 +56,6 @@
     user-select: none;
 }
 
-.input-button:hover {
+.login_button:hover {
     color: #D72323;
 }
