@@ -29,10 +29,15 @@ public class AuthController {
         this.tokenProvider = tokenProvider;
         this.authenticationManagerBuilder = authenticationManagerBuilder;
     }
-    
+    // @PostMapping("/test")
+    // public String testAPI( @RequestBody LoginDto loginDto) {
+    //     System.out.println(loginDto.getUsername());
+    //     System.out.println(loginDto.getPassword());
+    //     return "it was test";
+    // }
     @PostMapping("/authenticate")
     public ResponseEntity<TokenDto> authorize(@Valid @RequestBody LoginDto loginDto) {
-
+        
         UsernamePasswordAuthenticationToken authenticationToken =
                 new UsernamePasswordAuthenticationToken(loginDto.getUsername(), loginDto.getPassword());
 

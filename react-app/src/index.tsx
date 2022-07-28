@@ -4,8 +4,6 @@ import "./index.css";
 import App from "./App";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Mypage from "./router/Mypage";
-import ModifyAccountInfo from "./router/ModifyAccountInfo";
-import Scheduler from "./router/Scheduler";
 import BoardList from "./router/BoardList";
 import Board from "./router/Board";
 
@@ -20,11 +18,11 @@ root.render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />}>
-        <Route path="edit" element={<ContentEdit/>}></Route> 
-        <Route path="list/:page/:boardTitle"  element={<BoardList />} />
+        <Route path="edit" element={<ContentEdit />}></Route>
+        <Route path="list/:page/:boardTitle" element={<BoardList />} />
         <Route path="board/:page" element={<Board />} />
 
-        <Route path="mypage" element={<Mypage />}/>
+        <Route path="mypage" element={<Mypage />} />
       </Route>
       <Route path="login" element={<Login />} />
       <Route path="register" element={<Register />} />

@@ -1,0 +1,28 @@
+.DeniedAccess_wrapper {
+    margin: 10% auto;
+    text-align: center;
+}
+
+.DeniedAccess_title {
+    margin: 0 35%;
+    font-size: xx-large;
+    border-bottom: 1px solid;
+
+}
+
+.DeniedAccess_btn {
+
+    display: inline-block;
+    font-size: x-large;
+    text-decoration: none;
+    background-color: #3A4750;
+    border: 1px solid white;
+    color: white;
+    margin: 3%;
+    width: 20%;
+    display: inline-block;
+}
+
+.DeniedAccess_btn:hover {
+    color: #D72323;
+}

@@ -1,22 +1,25 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { SubmitHandler, useForm } from "react-hook-form";
 import axios from "axios";
 import "../css/login.css";
+const SET_TOKEN = "SET_TOKEN";
 const enum FormNumber {
   userID = 0,
   password = 1,
 }
-interface Password {
-  userID: string;
+interface LoginForm {
+  username: string;
   password: string;
 }
-export default function Login() {
+
+function Login() {
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<Password>();
-  const onSubmit: SubmitHandler<Password> = (data, event) => {
+  } = useForm<LoginForm>();
+  const onSubmit: SubmitHandler<LoginForm> = (data, event) => {
     handleLoginSubmit(event);
   };
   function clickHiddenLoginSubmitBtn() {
@@ -26,34 +29,26 @@ export default function Login() {
     }
   }
   async function handleLoginSubmit(e: React.BaseSyntheticEvent) {
-    console.log();
     const formData = e.target.form;
-    const LoginData: Password = {
-      userID: (formData[FormNumber.userID] as HTMLInputElement).value,
+    const LoginData: LoginForm = {
+      username: (formData[FormNumber.userID] as HTMLInputElement).value,
       password: (formData[FormNumber.password] as HTMLInputElement).value,
     };
-localStorage.setItem('token', "token");
     await axios
       .post(
-        "https//localhost:3000/jwt/login/test",
-        {
-          username: LoginData.userID,
-          password: LoginData.password,
-        },
-        {
-          headers: {
-            "Content-type": "application/json",
-            "Authorization":`Bearer `
-          },
-        }
+        "/auth/authenticate",
+        LoginData
+
       )
       .then((Response) => {
-        console.log(Response.data);
+          localStorage.setItem("jwt", Response.data.token);
+          
       })
       .catch((Error) => {
         console.log(Error);
       });
     e.preventDefault();
+    navigate("/mypage");
   }
   return (
     <div className="login_frame">
@@ -65,11 +60,11 @@ localStorage.setItem('token', "token");
           </label>
           <input
             id="ID"
-            className={`login_input ${errors.userID && "login_validation"}`}
+            className={`login_input ${errors.username && "login_validation"}`}
             type="text"
             placeholder="아이디를 입력해주세요."
             name="userID"
-            {...register("userID", { required: true })}
+            {...register("username", { required: true })}
           />
           <br />
           <label htmlFor="password" className="login_input_label">
@@ -79,9 +74,9 @@ localStorage.setItem('token', "token");
             id="password"
             className={`login_input ${errors.password && "login_validation"}`}
             type="password"
-            onChange={(event) => {
-              console.log(event.target.value);
-            }}
+            // onChange={(event) => {
+            //   console.log(event.target.value);
+            // }}
             placeholder="6~30자 이내로 입력해주세요"
             name="password"
             {...register("password", {
@@ -98,6 +93,7 @@ localStorage.setItem('token', "token");
           >
             로그인
           </button>
+
           <input
             id="login_submit"
             type="submit"
@@ -113,3 +109,6 @@ localStorage.setItem('token', "token");
     </div>
   );
 }
+
+
+export default Login;

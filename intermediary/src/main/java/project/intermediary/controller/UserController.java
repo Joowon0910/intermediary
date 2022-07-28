@@ -2,12 +2,12 @@ package project.intermediary.controller;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
-import project.intermediary.dto.UserDto;
-import project.intermediary.entity.User;
-import project.intermediary.services.UserService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
+import project.intermediary.dto.UserDto;
+import project.intermediary.entity.User;
+import project.intermediary.services.UserService;
 
 @RestController
 @RequestMapping("/users")
@@ -46,4 +46,5 @@ public class UserController {
       userService.getUserWithAuthorities(username).get()
     );
   }
+
 }

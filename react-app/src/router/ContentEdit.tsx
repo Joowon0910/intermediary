@@ -1,3 +1,5 @@
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 import "../css/ContentEdit.css";
 
 // function disablePlaceholder() {
@@ -18,6 +20,7 @@ interface ValidateType {
   isNoContent: boolean;
 }
 export default function ContentEdit() {
+  const navigator = useNavigate();
   let isPlaceholderRemoved = false;
   let isWarnNoTitle = false;
   let isWarnTooLongTitle = false;
@@ -185,7 +188,9 @@ export default function ContentEdit() {
 
     return checkAllofValidationIsOK(validateResult);
   }
-  function clieckedContentEditSubmit(event: React.FormEvent<HTMLInputElement>): void {
+  function clieckedContentEditSubmit(
+    event: React.FormEvent<HTMLInputElement>
+  ): void {
     event.preventDefault();
     copyArticle();
     const targetForm = event.currentTarget.form;
@@ -212,17 +217,18 @@ export default function ContentEdit() {
           break;
       }
     }
-    const SubmitForm: HTMLFormElement = document.getElementById(
-      "Article_form"
-    ) as HTMLFormElement;
     if (validateFormData(formData, targetForm)) {
-      console.log("done");
-      SubmitForm.submit();
+      sendFormData(formData);
+      navigator('/mypage');
     }
-
-    //back to board list
   }
-
+  async function sendFormData(formData:FormDataType) {
+    await axios.post("/article/addArticle", formData, {
+      headers: {
+        Authorization: "Bearer " + localStorage.getItem("jwt"),
+      },
+    });
+  }
   function deletePlaceholder() {
     if (isPlaceholderRemoved) return;
     const placeholder = document.getElementsByClassName(
@@ -246,14 +252,22 @@ export default function ContentEdit() {
         <div className="ContentEdit_validation_warning ContentEdit_No_content disable">
           내용을 입력하세요
         </div>
-        <div className="ContentEdit_btn" onClick={clickHiddenContentEditSubmitBtn}>
+        <div
+          className="ContentEdit_btn"
+          onClick={clickHiddenContentEditSubmitBtn}
+        >
           완료
         </div>
         <div className="ContentEdit_btn" onClick={clickHiddenImageUploadBtn}>
           이미지 첨부
         </div>
       </div>
-      <form className="Article_write_form" action="/api/board/addArticle" method="post" id="Article_form">
+      <form
+        className="Article_write_form"
+        action="/article/addArticle"
+        method="post"
+        id="Article_form"
+      >
         <div className="ContentEdit_header_wrapper">
           <div className="ContentEdit_input_wrapper title_wrapper">
             <input
@@ -328,11 +342,9 @@ export default function ContentEdit() {
   );
 }
 
-
-  /* <img
+/* <img
   src={require("../images/VideoGameController.png")}
   alt={require("../images/VideoGameController.png")}
   className=" left_located icon"
   draggable={true}
 /> */
-

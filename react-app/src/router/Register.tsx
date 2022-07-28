@@ -67,9 +67,9 @@ export default function Register() {
       referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
       body: JSON.stringify(UserFormData), // body의 데이터 유형은 반드시 "Content-Type" 헤더와 일치해야 함
     });
-    const redirectURL: string = "";
-    const originURL:string = "http://localhost:3000";
-    response.text().then(response => window.location.replace("http://localhost:3000".concat('',response))); // JSON 응답을 네이티브 JavaScript 객체로 파싱
+    // const redirectURL: string = "";
+    // const originURL:string = "http://localhost:3000";
+    // response.text().then(response => window.location.replace("http://localhost:3000".concat('',response))); // JSON 응답을 네이티브 JavaScript 객체로 파싱
   }
   return (
     <div className="register-form">
