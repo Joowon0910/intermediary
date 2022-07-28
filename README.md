@@ -48,7 +48,7 @@
     </tr>
     <tr>  
       <td>로그인, 회원가원 폼</td>
-      <td>수정중</td>
+      <td>완료/td>
      </tr>
     <tr>
       <td>마이페이지</td>
@@ -57,15 +57,15 @@
     <th colspan=2>Back-end</th>
     <tr>
       <td>페이지 접근 제한</td>
-      <td>진행중</td>
+      <td>완료</td>
     </tr>
     <tr>
       <td>로그인 처리</td>
-      <td>진행중</td>
+      <td>완료</td>
     </tr>
     <tr>
       <td>회원가입 처리</td>
-      <td>진행중</td>
+      <td>완료</td>
     </tr>
     <tr>
       <td>게시글 처리</td>
